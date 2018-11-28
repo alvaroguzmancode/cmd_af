@@ -1,0 +1,19 @@
+<% content_for :content do %>
+  
+  <form>
+    <div class="form-group">
+      <label><strong>Descripcion:</strong></label>
+      <%= @tipo_equipo.descripcion %>
+    </div>
+  </form>
+
+  <%= link_to 'Edit', edit_tipo_equipo_path(@tipo_equipo), {:class=>"btn btn-primary btn-sm"}  %> |
+  <%= link_to 'Back', tipo_equipos_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+  Show Tipo de Equipo 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+

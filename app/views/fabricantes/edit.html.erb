@@ -1,0 +1,16 @@
+<% content_for :content do %>
+    <%= render 'form', fabricante: @fabricante %>
+    
+    <%= link_to 'Show', @fabricante, {:class=>"btn btn-success btn-sm"}  %>
+    <%= link_to 'Back', fabricantes_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+    Editing Fabricante 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+
+
+
+

@@ -1,0 +1,39 @@
+<% content_for :content do %>
+  
+  
+  <p>
+    <strong>Descripcion:</strong>
+    <%= @equipo.descripcion %>
+  </p>
+
+  <p>
+    <strong>Tipo equipo:</strong>
+    <%= @equipo.tipo_equipo_id %>
+  </p>
+
+  <p>
+    <strong>Fabricante:</strong>
+    <%= @equipo.fabricante_id %>
+  </p>
+
+  <p>
+    <strong>Consultorio:</strong>
+    <%= @equipo.consultorio_id %>
+  </p>
+
+  <p>
+    <strong>Fecha adquisicion:</strong>
+    <%= @equipo.fecha_adquisicion %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_equipo_path(@equipo), {:class=>"btn btn-primary btn-sm"}  %> |
+  <%= link_to 'Back', equipos_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+  Show Equipo 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+

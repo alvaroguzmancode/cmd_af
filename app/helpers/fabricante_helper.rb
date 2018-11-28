@@ -1,0 +1,2 @@
+module FabricanteHelper
+end

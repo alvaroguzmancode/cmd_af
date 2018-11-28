@@ -1,0 +1,13 @@
+<% content_for :content do %>
+    <%= render 'form', equipo: @equipo %>
+    
+    <%= link_to 'Show', @equipo, {:class=>"btn btn-success btn-sm"}  %>
+    <%= link_to 'Back', equipos_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+    Editing Equipo 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+

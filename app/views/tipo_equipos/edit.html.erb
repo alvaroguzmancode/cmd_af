@@ -1,0 +1,16 @@
+<% content_for :content do %>
+    <%= render 'form', tipo_equipo: @tipo_equipo %>
+    
+    <%= link_to 'Show', @tipo_equipo, {:class=>"btn btn-success btn-sm"}  %> | 
+    <%= link_to 'Back', tipo_equipos_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+    Editing Tipo de Equipo 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+
+
+
+

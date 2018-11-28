@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyString
+  tipo_equipo_id: 1
+  fabricante_id: 1
+  consultorio_id: 1
+  fecha_adquisicion: MyString
+
+two:
+  descripcion: MyString
+  tipo_equipo_id: 1
+  fabricante_id: 1
+  consultorio_id: 1
+  fecha_adquisicion: MyString

@@ -1,0 +1,19 @@
+<% content_for :content do %>
+  
+  <form>
+    <div class="form-group">
+      <label><strong>Descripcion:</strong></label>
+      <%= @fabricante.descripcion %>
+    </div>
+  </form>
+
+  <%= link_to 'Edit', edit_fabricante_path(@fabricante), {:class=>"btn btn-primary btn-sm"}  %> |
+  <%= link_to 'Back', fabricantes_path, {:class=>"btn btn-warning btn-sm"} %>
+<% end %>
+
+<% content_for :title do %> 
+  Show Fabricante 
+<% end %>
+
+<%= render template: 'layouts/appb' %>
+

@@ -1,0 +1,42 @@
+<%= form_with(model: equipo, local: true) do |form| %>
+  <% if equipo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equipo.errors.count, "error") %> prohibited this equipo from being saved:</h2>
+
+      <ul>
+      <% equipo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, { :class => "form-control", placeholder: "Descripción" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tipo_equipo_id %>
+    <%= form.number_field :tipo_equipo_id, { :class => "form-control", placeholder: "Tipo de equipo" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fabricante_id %>
+    <%= form.number_field :fabricante_id, { :class => "form-control", placeholder: "Fabricante" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :consultorio_id %>
+    <%= form.number_field :consultorio_id, { :class => "form-control", placeholder: "Consultorio" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :fecha_adquisicion %>
+    <%= form.text_field :fecha_adquisicion, { :class => "form-control", placeholder: "Fecha Adquisicion" } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
