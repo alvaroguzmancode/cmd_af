@@ -4,8 +4,8 @@ class FabricantesController < ApplicationController
   # GET /fabricantes
   # GET /fabricantes.json
   def index
-    # @fabricantes = Fabricante.all
-    @fabricantes  = Fabricante.paginate(:page => params[:page], :per_page => 9)
+    @fabricantes = Fabricante.all
+    @fabricantes  = Fabricante.paginate(:page => params[:page], :per_page => 10)
     render 'fabricantes/list'
   end
 

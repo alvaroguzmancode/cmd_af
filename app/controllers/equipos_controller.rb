@@ -1,3 +1,4 @@
+
 class EquiposController < ApplicationController
   before_action :set_equipo, only: [:show, :edit, :update, :destroy]
 
@@ -17,6 +18,8 @@ class EquiposController < ApplicationController
   # GET /equipos/new
   def new
     @equipo = Equipo.new
+    @fabricantes = Fabricante.new
+    # @fabricantes = @fabricantes->
     render 'equipos/new'
   end
 
@@ -31,7 +34,7 @@ class EquiposController < ApplicationController
 
     respond_to do |format|
       if @equipo.save
-        format.html { redirect_to @equipo, notice: 'Equipo was successfully created.' }
+        format.html { redirect_to @equipo, notice: 'Equipo ah sido creado.' }
         format.json { render :show, status: :created, location: @equipo }
       else
         format.html { render :new }
@@ -45,7 +48,7 @@ class EquiposController < ApplicationController
   def update
     respond_to do |format|
       if @equipo.update(equipo_params)
-        format.html { redirect_to @equipo, notice: 'Equipo was successfully updated.' }
+        format.html { redirect_to @equipo, notice: 'Equipo ah sido actualizado.' }
         format.json { render :show, status: :ok, location: @equipo }
       else
         format.html { render :edit }
@@ -59,7 +62,7 @@ class EquiposController < ApplicationController
   def destroy
     @equipo.destroy
     respond_to do |format|
-      format.html { redirect_to equipos_url, notice: 'Equipo was successfully destroyed.' }
+      format.html { redirect_to equipos_url, notice: 'Equipo ah sido eliminado.' }
       format.json { head :no_content }
     end
   end
